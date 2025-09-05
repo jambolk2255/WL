@@ -1,0 +1,431 @@
+/**
+ * Enhanced Frontend CSS for WP Learning Accounts
+ * File: assets/css/frontend.css
+ */
+
+/* Main Dashboard Container */
+.wla-student-dashboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.wla-student-dashboard h2 {
+    color: #23282d;
+    font-size: 28px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e1e4e8;
+}
+
+.wla-student-dashboard h3 {
+    color: #23282d;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Notifications Section */
+.wla-notifications-section {
+    background: #f0f8ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wla-notifications-section h3 {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wla-badge {
+    background: #ff4444;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.wla-notification {
+    background: white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.wla-notification-unread {
+    border-left-color: #4CAF50;
+    background: #f9fff9;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.1);
+}
+
+.wla-notification p {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.wla-notification-date {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Accounts Grid */
+.wla-accounts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Account Cards */
+.wla-account-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.wla-account-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.wla-account-card.wla-account-public {
+    border: 2px solid #ff9800;
+}
+
+.wla-account-header {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wla-account-public .wla-account-header {
+    background: linear-gradient(135deg, #ff9800, #f57c00);
+}
+
+.wla-account-header h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.wla-account-badges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.wla-account-status {
+    background: rgba(255,255,255,0.2);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.wla-account-type-badge {
+    background: rgba(0,0,0,0.2);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wla-account-type-badge.wla-individual {
+    background: rgba(255,255,255,0.3);
+}
+
+/* Account Body */
+.wla-account-body {
+    padding: 20px;
+}
+
+/* Split Info for Public Accounts */
+.wla-split-info {
+    background: #fff3e0;
+    border: 1px solid #ff9800;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.wla-split-info strong {
+    color: #e65100;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.wla-split-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.wla-split-details span {
+    padding: 3px 0;
+}
+
+/* Account Fields */
+.wla-account-field {
+    margin-bottom: 15px;
+}
+
+.wla-account-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.wla-account-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.wla-account-value span {
+    flex: 1;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.wla-copy-btn, .wla-toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+    opacity: 0.7;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.wla-copy-btn:hover, .wla-toggle-password:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Account Notes */
+.wla-account-notes p {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Account Meta */
+.wla-account-meta {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #999;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wla-reassignment-count {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* First Owner Section */
+.wla-first-owner-list {
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.wla-first-owner-item {
+    background: white;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wla-first-owner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.wla-first-owner-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.wla-first-owner-details strong {
+    color: #ff9800;
+}
+
+.wla-badge-public {
+    background: #ff9800;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.wla-section-description {
+    color: #666;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* Help Section */
+.wla-help-section {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 40px;
+    border: 1px solid #e1e4e8;
+}
+
+.wla-help-section h3 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+.wla-help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.wla-help-item {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #e1e4e8;
+}
+
+.wla-help-item h4 {
+    margin-top: 0;
+    color: #23282d;
+}
+
+.wla-help-item p {
+    margin-bottom: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Notices */
+.wla-notice {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.wla-notice-info {
+    background: #e3f2fd;
+    border-left: 4px solid #2196F3;
+    color: #0c5460;
+}
+
+.wla-notice-warning {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    color: #856404;
+}
+
+.wla-notice p {
+    margin: 5px 0;
+}
+
+/* Buttons */
+.wla-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+    font-weight: 600;
+}
+
+.wla-btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.wla-btn-secondary:hover {
+    background: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wla-accounts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wla-help-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .wla-account-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .wla-account-badges {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    .wla-account-value {
+        flex-wrap: wrap;
+    }
+    
+    .wla-copy-btn, .wla-toggle-password {
+        font-size: 16px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .wla-copy-btn,
+    .wla-toggle-password,
+    .wla-btn,
+    .wla-notifications-section {
+        display: none;
+    }
+    
+    .wla-password-field {
+        font-family: 'Courier New', monospace;
+    }
+}
