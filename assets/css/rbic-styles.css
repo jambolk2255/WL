@@ -1,0 +1,139 @@
+/* Styles for [income_summary] */
+.dark-income-card {
+    background: #0a1f1a;
+    border-left: 5px solid #00ff88;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.2);
+    color: #ffffff;
+    max-width: 500px;
+    font-family: 'Segoe UI', sans-serif;
+}
+.dark-income-card h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 20px;
+    color: #00ffcc;
+}
+.dark-income-card .item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.dark-income-card .item .label {
+    font-weight: 500;
+}
+.dark-income-card .item .value.pending {
+    color: #ffaa00;
+}
+.dark-income-card .item .value.approved {
+    color: #00ff99;
+}
+
+/* Styles for [kawaii_cat_income] - basic styles, can be expanded */
+.kawaii-cat-wrapper {
+    /* Basic styles for the wrapper */
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background: #f0f8ff;
+    border: 2px solid #cce7ff;
+}
+
+/* Styles for [income_history_table] */
+.income-history-wrapper .income-tabs {
+    margin: 25px 0;
+    display: flex;
+    gap: 10px;
+}
+.income-history-wrapper .income-tabs button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,255,200,0.3);
+    background: rgba(0, 255, 200, 0.1);
+    backdrop-filter: blur(10px);
+    color: #aaffee;
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 2px 2px 6px rgba(0,255,200,0.05), -2px -2px 6px rgba(0,255,200,0.05);
+    cursor: pointer;
+}
+.income-history-wrapper .income-tabs button.active {
+    background: rgba(0, 255, 200, 0.25);
+    box-shadow: inset 2px 2px 6px rgba(0,255,200,0.1), inset -2px -2px 6px rgba(255,255,255,0.05);
+    color: #ffffff;
+}
+.income-history-wrapper .income-table-container {
+    border-radius: 18px;
+    background: rgba(0, 40, 30, 0.3);
+    padding: 25px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,255,200,0.2);
+    box-shadow: 0 0 12px rgba(0,255,200,0.1);
+}
+.income-history-wrapper table.income-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+}
+.income-history-wrapper .income-table th, .income-history-wrapper .income-table td {
+    padding: 12px;
+    text-align: left;
+    color: #dffef7;
+    border-bottom: 1px solid rgba(0,255,200,0.1);
+}
+.income-history-wrapper .income-table th {
+    background: rgba(0, 255, 200, 0.05);
+    color: #72fcd4;
+    font-weight: bold;
+    text-align: center;
+}
+.income-history-wrapper .income-table tr:nth-child(even) {
+    background-color: rgba(0,255,200,0.03);
+}
+.income-history-wrapper .income-table tr:hover {
+    background-color: rgba(0,255,200,0.07);
+}
+
+/* Styles for [monthly_income_history] */
+.monthly-income-wrapper .monthly-tabs {
+    /* Styles for monthly tabs */
+}
+.monthly-income-wrapper .monthly-tab-btn {
+    /* Styles for monthly tab buttons */
+}
+.monthly-income-wrapper .monthly-group {
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.monthly-income-wrapper .monthly-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+.monthly-income-wrapper .monthly-items {
+    display: none; /* Hidden by default */
+    padding: 1rem;
+    border-top: 1px solid #eee;
+}
+.monthly-income-wrapper .monthly-item-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.monthly-income-wrapper .monthly-item-row:last-child {
+    border-bottom: none;
+}
+/* Basic responsive handling for monthly view */
+@media (max-width: 600px) {
+    .monthly-income-wrapper .monthly-item-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
